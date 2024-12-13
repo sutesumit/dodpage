@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import DodLogo from '../public/Dof D.png'
+import DodLogo from './assets/DoD Long Logo.png'
 import './App.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <a href="" target="_blank">
-          <img src={DodLogo} className="logo react" alt="React logo" />
+          <img src={DodLogo} className="logo react"/>
         </a>
       </div>
       <h1>DoD Facilitator Site</h1>
