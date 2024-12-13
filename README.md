@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # dodpage
 A Vite + React application to serve as a facilitation guide for "Dramas of Discrimination" by Ambedkar Reading Circle, Bangalore.
 =======
+=======
+>>>>>>> 7ac6b70b8c000ad107e497040d0f4faed5071b68
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -52,4 +55,7 @@ export default tseslint.config({
   },
 })
 ```
+<<<<<<< HEAD
 >>>>>>> 7ac6b70 (First commit with boiterplate)
+=======
+>>>>>>> 7ac6b70b8c000ad107e497040d0f4faed5071b68
