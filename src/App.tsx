@@ -11,7 +11,7 @@ function App() {
         <Arc_Logo />
         <DodTitle />
       </div>
-      <Slab color="#031ce3" size="medium" text="Site Under Construction" textColor="" />
+      <Slab color="#031ce3" size="medium" text="A web-based workshop facilitator under construction." textColor="" />
       <p className='credits credits_1'>
         Designer Developer: <a target='_blank' href='https://sumitsute.com'>sumit sute</a>
       </p>
