@@ -1,30 +1,25 @@
-import { useState } from 'react'
-import DodLogo from './assets/DoD Long Logo.png'
-import './App.css'
+import { Slab } from 'react-loading-indicators'
+import DodTitle from './MyComponents/dodTitle.tsx'
+import Arc_Logo from './MyComponents/arc_logo.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="" target="_blank">
-          <img src={DodLogo} className="logo react"/>
-        </a>
+    <div className='wrapper'>
+      <div className='container'>
+      <div  className='logo_wrap'>
+        <Arc_Logo />
+        <DodTitle />
       </div>
-      <h1>DoD Facilitator Site</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          This is a <code>boilterplate</code> and a work in progress.
-        </p>
-      </div>
-      <p className="read-the-docs">
+      <Slab color="#031ce3" size="medium" text="Site Under Construction" textColor="" />
+      <p className='credits credits_1'>
         Designer Developer: <a target='_blank' href='https://sumitsute.com'>sumit sute</a>
       </p>
-    </>
+      <p className='credits credits_2'>
+        With Design Support  From: <a target='_blank' href='https://sumitsute.com'>1. , 2. ,  3. </a>
+      </p>
+    </div>
+    </div>
   )
 }
 
