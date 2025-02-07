@@ -27,11 +27,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={` antialiased text-[var(--primary-white)]`}
+        className={`${italianno.className} antialiased text-[var(--primary-white)]`}
       >
         {children}
         <div className="bg-image bg-[var(--primary-white)] absolute -z-10 inset-0 overflow-hidden">
-          <Image className="opacity-75"  src="/bg-image.png" alt="bg" layout="fill" />
+          <Image className="opacity-75 object-cover h-full w-full"  src="/bg-image.png" alt="bg" width={3590} height={1625} />
         </div>
       </body>
     </html>
