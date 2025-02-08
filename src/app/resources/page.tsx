@@ -6,11 +6,11 @@ import Image from 'next/image'
 const Home = () => {
   return (
     <div className="page flex flex-col items-center justify-center bg-[var(--primary-blue)] w-full h-full rounded-md">
-      <h5 className='text-xs text-center p-2 opacity-75 before:content-["-"] after:content-["-"]'>Leaf through the Dramas of Discrimination Workshop Facilitation Manual</h5>
-      <div className='max-h-[80vh] w-[60vw] object-contain'>
+      
+      <div className='max-h-[70vh] object-contain flex w-[60vw] overflow-hidden'>
         {// @ts-expect-error too many props
         <HTMLFlipBook
-          width={80}
+          width={70}
           height={100}
           size="stretch"
           style = {{width: '100%', height: '100%'}}
@@ -25,7 +25,8 @@ const Home = () => {
               />
             </div> ))}
         </HTMLFlipBook>}
-      </div>  
+      </div> 
+      <h5 className='text-xs text-center pt-2 opacity-75 before:content-["-"] after:content-["-"]'>Leaf through the Dramas of Discrimination Workshop Facilitation Manual</h5> 
     </div>
   )
 }
