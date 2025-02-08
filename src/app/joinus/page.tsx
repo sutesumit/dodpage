@@ -1,5 +1,6 @@
 'use client'
 
+import { em } from 'framer-motion/client'
 import React, { use, useEffect, useRef } from 'react'
 import { annotate } from 'rough-notation'
 
@@ -18,6 +19,7 @@ const Home = () => {
   const emailID = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
+
     if (approachValues.current && 
         visionARC.current && 
         dodApproach.current &&
@@ -30,31 +32,103 @@ const Home = () => {
         passionApply.current &&
         emailID.current
       ) {
-      const a1 = annotate(approachValues.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000  })
-      const a2 = annotate(visionARC.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000  })
-      const a3 = annotate(dodApproach.current, { type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000  })
-      const a4 = annotate(addressCaste.current, { type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a5 = annotate(webApp.current,  { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a6 = annotate(dataDemands.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a7 = annotate(UXRole.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a8 = annotate(designJustice.current, { type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a9 = annotate(workJD.current, { type: 'bracket', brackets: ['left', 'right'], color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a10 = annotate(passionApply.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
-      const a11 = annotate(emailID.current, { type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 5000 })
+
+      const a1 = annotate(approachValues.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500  })
+      const a2 = annotate(visionARC.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500  })
+      const a3 = annotate(dodApproach.current, { type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500  })
+      const a4 = annotate(addressCaste.current, { type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a5 = annotate(webApp.current,  { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a6 = annotate(dataDemands.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a7 = annotate(UXRole.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a8 = annotate(designJustice.current, { type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a9 = annotate(workJD.current, { type: 'bracket', brackets: ['left', 'right'], color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a10 = annotate(passionApply.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
+      const a11 = annotate(emailID.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
       
-      a1.show()
-      a2.show()
-      a3.show()
-      a4.show()
-      a5.show()
-      a6.show()
-      a7.show()
-      a8.show()
-      a9.show()
-      a10.show()
-      a11.show()
+      approachValues.current.addEventListener('mouseenter', ()=>a1.show())
+      approachValues.current.addEventListener('mouseleave', ()=>a1.hide())
+
+      visionARC.current.addEventListener('mouseenter', ()=>a2.show())
+      visionARC.current.addEventListener('mouseleave', ()=>a2.hide())
+
+      dodApproach.current.addEventListener('mouseenter', ()=>a3.show())
+      dodApproach.current.addEventListener('mouseleave', ()=>a3.hide())
+
+      addressCaste.current.addEventListener('mouseenter', ()=>a4.show())
+      addressCaste.current.addEventListener('mouseleave', ()=>a4.hide())
+
+      webApp.current.addEventListener('mouseenter', ()=>a5.show())
+      webApp.current.addEventListener('mouseleave', ()=>a5.hide())
+
+      dataDemands.current.addEventListener('mouseenter', ()=>a6.show())
+      dataDemands.current.addEventListener('mouseleave', ()=>a6.hide())
+
+      UXRole.current.addEventListener('mouseenter', ()=>a7.show())
+      UXRole.current.addEventListener('mouseleave', ()=>a7.hide())
+
+      designJustice.current.addEventListener('mouseenter', ()=>a8.show())
+      designJustice.current.addEventListener('mouseleave', ()=>a8.hide())
+
+      workJD.current.addEventListener('mouseenter', ()=>a9.show())
+      workJD.current.addEventListener('mouseleave', ()=>a9.hide())
+
+      passionApply.current.addEventListener('mouseenter', ()=>a10.show())
+      passionApply.current.addEventListener('mouseleave', ()=>a10.hide())
+
+      emailID.current.addEventListener('mouseenter', ()=>a11.show())
+      emailID.current.addEventListener('mouseleave', ()=>a11.hide())
+
+
+
+
+      // a1.show()
+      // a2.show()
+      // a3.show()
+      // a4.show()
+      // a5.show()
+      // a6.show()
+      // a7.show()
+      // a8.show()
+      // a9.show()
+      // a10.show()
+      // a11.show()
 
       return () => {
+
+        approachValues.current?.removeEventListener('mouseenter', ()=>a1.show())
+        approachValues.current?.removeEventListener('mouseleave', ()=>a1.hide())
+  
+        visionARC.current?.removeEventListener('mouseenter', ()=>a2.show())
+        visionARC.current?.removeEventListener('mouseleave', ()=>a2.hide())
+  
+        dodApproach.current?.removeEventListener('mouseenter', ()=>a3.show())
+        dodApproach.current?.removeEventListener('mouseleave', ()=>a3.hide())
+  
+        addressCaste.current?.removeEventListener('mouseenter', ()=>a4.show())
+        addressCaste.current?.removeEventListener('mouseleave', ()=>a4.hide())
+  
+        webApp.current?.removeEventListener('mouseenter', ()=>a5.show())
+        webApp.current?.removeEventListener('mouseleave', ()=>a5.hide())
+        
+        dataDemands.current?.removeEventListener('mouseenter', ()=>a6.show())
+        dataDemands.current?.removeEventListener('mouseleave', ()=>a6.hide())
+  
+        UXRole.current?.removeEventListener('mouseenter', ()=>a7.show())
+        UXRole.current?.removeEventListener('mouseleave', ()=>a7.hide())
+  
+        designJustice.current?.removeEventListener('mouseenter', ()=>a8.show())
+        designJustice.current?.removeEventListener('mouseleave', ()=>a8.hide())
+  
+        workJD.current?.removeEventListener('mouseenter', ()=>a9.show())
+        workJD.current?.removeEventListener('mouseleave', ()=>a9.hide())
+  
+        passionApply.current?.removeEventListener('mouseenter', ()=>a10.show())
+        passionApply.current?.removeEventListener('mouseleave', ()=>a10.hide())
+  
+        emailID.current?.removeEventListener('mouseenter', ()=>a11.show())
+        emailID.current?.removeEventListener('mouseleave', ()=>a11.hide())
+
+        
         a1.remove()
         a2.remove()
         a3.remove()
