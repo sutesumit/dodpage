@@ -41,8 +41,6 @@ const Home = () => {
             <p className="sub-text-container">We strongly encourage applications from individuals from Systematically Oppressed Communities & Regions (SOCR). We believe that diverse perspectives are essential to creating inclusive and equitable designs, and we are committed to building a team that reflects the communities we serve.  Your lived experience and unique insights are valuable and will be considered an asset to our team.  We understand that traditional pathways to design roles may not always be accessible, and considere a range of experiences and skill sets.  If you are passionate about design for social justice, we encourage you to apply, even if you don&apos;t meet every listed qualification.</p>
             <p className='sub-text-container'>Please write to <span className='underline'>ambedkarreadingcircle.bangalore@gmail.com</span> with a cover letter (200-400 words) and subject line &quot;UI/UX Designer Application - ARC Dramas of Discrimination.&quot;</p>
           </div>
-
-
         </div>
     </div>
   )
