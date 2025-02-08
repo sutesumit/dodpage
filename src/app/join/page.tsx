@@ -8,6 +8,9 @@ const Home = () => {
             <p className='text-xs p-1 opacity-50 italic'>Reserved for IIHS Urban Fellows:</p>
             <p className='bg-[var(--primary-blue)] text-[var(--primary-white)] py-1 px-3 rounded-sm'>UI/UX Designer JD - Dramas of Discrimination Web App</p>
           </div>
+          <div className="sub-container my-3 border-[1px] border-[var(--primary-blue)] border-dotted rounded-lg">
+            <p className="sub-text-container">You don't need to have every skill listed in this description.  The ARC has always been a journey driven by necessity, passion, and community support.  We often found ourselves doing several things for the first time, approaching challenges with first-principles thinking, immense curiosity, and humility. Our deep engagement with our context and needs has always empowered us to find solutions, even when lacking specific skills. If this dynamic and collaborative environment resonates with you, come get in touch!</p>
+          </div>
           <div className="sub-container">
             <h5 className="sub-title-container">About ARC and Dramas of Discrimination</h5>
             <p className="sub-text-container">The Ambedkar Reading Circle (ARC) Bangalore, founded in April 2023, is an anti-caste collective. ARC organizes reading circles, workshops, talks, and film screenings in Bengaluru with the vision of making anti-caste worldviews more accessible and mainstream in public spaces and public consciousness. Regular reading circles are often held in Cubbon Park. ARC has actively collaborated with organizations such as the Alternative Law Forum, Hasiru Dala, the Museum of Art and Photography, the Bangalore International Center, and the Foundation of Art and Health India.</p>
