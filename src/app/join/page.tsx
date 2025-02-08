@@ -9,7 +9,7 @@ const Home = () => {
             <p className='bg-[var(--primary-blue)] text-[var(--primary-white)] py-1 px-3 rounded-sm'>UI/UX Designer JD - Dramas of Discrimination Web App</p>
           </div>
           <div className="sub-container my-3 border-[1px] border-[var(--primary-blue)] border-dotted rounded-lg">
-            <p className="sub-text-container">You don't need to have every skill listed in this description.  The ARC has always been a journey driven by necessity, passion, and community support.  We often found ourselves doing several things for the first time, approaching challenges with first-principles thinking, immense curiosity, and humility. Our deep engagement with our context and needs has always empowered us to find solutions, even when lacking specific skills. If this dynamic and collaborative environment resonates with you, come get in touch!</p>
+            <p className="sub-text-container">You don&apos;t need to have every skill listed in this description.  The ARC has always been a journey driven by necessity, passion, and community support.  We often found ourselves doing several things for the first time, approaching challenges with first-principles thinking, immense curiosity, and humility. Our deep engagement with our context and needs has always empowered us to find solutions, even when lacking specific skills. If this dynamic and collaborative environment resonates with you, come get in touch!</p>
           </div>
           <div className="sub-container">
             <h5 className="sub-title-container">About ARC and Dramas of Discrimination</h5>
