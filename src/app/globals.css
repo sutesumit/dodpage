@@ -12,6 +12,19 @@ body {
 
 }
 
-.checkbox {
-  border: 3px solid pink;
+
+@layer components {
+
+  
+  .checkbox {
+    border: 1px solid yellow;
+  }
+
+  .nav-btn {
+    @apply px-2 py-2 rounded-md text-[var(--primary-white)] bg-[var(--primary-blue)] self-center text-center transition-all duration-300;
+  }
+
+  .nav-btn:hover {
+    @apply bg-[var(--primary-white)] text-[var(--primary-blue)];
+  }
 }

@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         'title': ['Cascadia Mono', 'monospace'],
         'of' : ['Italianno', 'monospace'],
+        'body': ['Miriam Libre', 'sans-serif'],
       }
     },
   },
