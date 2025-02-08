@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='page pt-12 flex justify-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
-        <div className='page-container checkbox my-2 relative font-body text-sm text-center'>
+        <div className='page-container my-2 relative font-body text-sm text-center'>
           <div className='title-container'>
             <p className='text-xs p-1 opacity-50 italic'>Reserved for IIHS Urban Fellows:</p>
             <p className='bg-[var(--primary-blue)] text-[var(--primary-white)] py-1 px-3 rounded-sm'>UI/UX Designer JD - Dramas of Discrimination Web App</p>
