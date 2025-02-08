@@ -17,7 +17,7 @@ body {
 
   
   .checkbox {
-    border: 1px solid yellow;
+    border: 1px solid red;
   }
 
   .nav-btn {
@@ -26,5 +26,21 @@ body {
 
   .nav-btn:hover {
     @apply bg-[var(--primary-white)] text-[var(--primary-blue)];
+  }
+
+  .page-container {
+    @apply max-w-[80ch] px-3 overflow-scroll;
+  }
+
+  .sub-container {
+    @apply text-left px-4 py-2;
+  }
+
+  .sub-container h5 {
+    @apply font-bold py-1;
+  }
+
+  .sub-container p {
+    @apply pl-4 py-1;
   }
 }
