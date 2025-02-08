@@ -1,7 +1,6 @@
 'use client';
 import DodLogo from "./my_components/elements/DodLogo";
 import ARCLogo from "./my_components/elements/ARCLogo";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
