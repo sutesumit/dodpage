@@ -1,146 +1,82 @@
 'use client'
 
-import { em } from 'framer-motion/client'
-import React, { use, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { annotate } from 'rough-notation'
+
+type AnnotationType = 'underline' | 'box' | 'circle' | 'highlight' | 'strike-through' | 'crossed-off' | 'bracket';
+
+
+interface AnnotationConfig {
+  ref: React.RefObject<HTMLElement | null>;
+  type: AnnotationType;
+  color: string;
+  multiline: boolean;
+  padding: number;
+  animationDuration: number;
+  brackets?: string[];
+}
 
 const Home = () => {
 
-  const approachValues = useRef<HTMLSpanElement>(null)
-  const visionARC = useRef<HTMLSpanElement>(null)
-  const dodApproach = useRef<HTMLSpanElement>(null)
-  const addressCaste = useRef<HTMLSpanElement>(null)
-  const webApp = useRef<HTMLSpanElement>(null)
-  const dataDemands = useRef<HTMLSpanElement>(null)
-  const UXRole = useRef<HTMLSpanElement>(null)
-  const designJustice = useRef<HTMLSpanElement>(null)
-  const workJD = useRef<HTMLSpanElement>(null)
-  const passionApply = useRef<HTMLSpanElement>(null)
-  const emailID = useRef<HTMLSpanElement>(null)
+  const approachValues = useRef<HTMLElement>(null)
+  const visionARC = useRef<HTMLElement>(null)
+  const dodApproach = useRef<HTMLElement>(null)
+  const addressCaste = useRef<HTMLElement>(null)
+  const webApp = useRef<HTMLElement>(null)
+  const dataDemands = useRef<HTMLElement>(null)
+  const UXRole = useRef<HTMLElement>(null)
+  const designJustice = useRef<HTMLElement>(null)
+  const workJD = useRef<HTMLElement>(null)
+  const passionApply = useRef<HTMLElement>(null)
+  const emailID = useRef<HTMLElement>(null)
 
   useEffect(() => {
 
-    if (approachValues.current && 
-        visionARC.current && 
-        dodApproach.current &&
-        addressCaste.current &&
-        webApp.current &&
-        dataDemands.current &&
-        UXRole.current &&
-        designJustice.current &&
-        workJD.current &&
-        passionApply.current &&
-        emailID.current
-      ) {
+    const annotationConfigs: AnnotationConfig[] = [
+      { ref: approachValues, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: visionARC, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: dodApproach, type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: addressCaste, type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: webApp, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: dataDemands, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: UXRole, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: designJustice, type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: workJD, type: 'bracket', brackets: ['left', 'right'], color: '#87aae6', multiline: true, padding: 0, animationDuration: 500 },
+      { ref: passionApply, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
+      { ref: emailID, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 }
+    ]
 
-      const a1 = annotate(approachValues.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500  })
-      const a2 = annotate(visionARC.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500  })
-      const a3 = annotate(dodApproach.current, { type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500  })
-      const a4 = annotate(addressCaste.current, { type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a5 = annotate(webApp.current,  { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a6 = annotate(dataDemands.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a7 = annotate(UXRole.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a8 = annotate(designJustice.current, { type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a9 = annotate(workJD.current, { type: 'bracket', brackets: ['left', 'right'], color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a10 = annotate(passionApply.current, { type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      const a11 = annotate(emailID.current, { type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 })
-      
-      approachValues.current.addEventListener('mouseenter', ()=>a1.show())
-      approachValues.current.addEventListener('mouseleave', ()=>a1.hide())
+    const cleanupFunctions: (() => void)[] = []
 
-      visionARC.current.addEventListener('mouseenter', ()=>a2.show())
-      visionARC.current.addEventListener('mouseleave', ()=>a2.hide())
+    annotationConfigs.forEach((config) => {
+      const currentElement = config.ref.current;
 
-      dodApproach.current.addEventListener('mouseenter', ()=>a3.show())
-      dodApproach.current.addEventListener('mouseleave', ()=>a3.hide())
+      if(!currentElement) return
 
-      addressCaste.current.addEventListener('mouseenter', ()=>a4.show())
-      addressCaste.current.addEventListener('mouseleave', ()=>a4.hide())
+      const a = annotate(currentElement, {
+        type: config.type,
+        color: config.color,
+        multiline: config.multiline,
+        padding: config.padding,
+        animationDuration: config.animationDuration
+      })
 
-      webApp.current.addEventListener('mouseenter', ()=>a5.show())
-      webApp.current.addEventListener('mouseleave', ()=>a5.hide())
+      const mouseEnterHandler = () => a.show()
+      const mouseLeaveHandler = () => a.hide()
 
-      dataDemands.current.addEventListener('mouseenter', ()=>a6.show())
-      dataDemands.current.addEventListener('mouseleave', ()=>a6.hide())
+      currentElement.addEventListener('mouseenter', mouseEnterHandler)
+      currentElement.addEventListener('mouseleave', mouseLeaveHandler)
 
-      UXRole.current.addEventListener('mouseenter', ()=>a7.show())
-      UXRole.current.addEventListener('mouseleave', ()=>a7.hide())
-
-      designJustice.current.addEventListener('mouseenter', ()=>a8.show())
-      designJustice.current.addEventListener('mouseleave', ()=>a8.hide())
-
-      workJD.current.addEventListener('mouseenter', ()=>a9.show())
-      workJD.current.addEventListener('mouseleave', ()=>a9.hide())
-
-      passionApply.current.addEventListener('mouseenter', ()=>a10.show())
-      passionApply.current.addEventListener('mouseleave', ()=>a10.hide())
-
-      emailID.current.addEventListener('mouseenter', ()=>a11.show())
-      emailID.current.addEventListener('mouseleave', ()=>a11.hide())
-
-
-
-
-      // a1.show()
-      // a2.show()
-      // a3.show()
-      // a4.show()
-      // a5.show()
-      // a6.show()
-      // a7.show()
-      // a8.show()
-      // a9.show()
-      // a10.show()
-      // a11.show()
-
-      return () => {
-
-        approachValues.current?.removeEventListener('mouseenter', ()=>a1.show())
-        approachValues.current?.removeEventListener('mouseleave', ()=>a1.hide())
+      return { removeListener: () => {
+        currentElement.removeEventListener('mouseenter', mouseEnterHandler)
+        currentElement.removeEventListener('mouseleave', mouseLeaveHandler)
+        a.remove()
+      }}
   
-        visionARC.current?.removeEventListener('mouseenter', ()=>a2.show())
-        visionARC.current?.removeEventListener('mouseleave', ()=>a2.hide())
-  
-        dodApproach.current?.removeEventListener('mouseenter', ()=>a3.show())
-        dodApproach.current?.removeEventListener('mouseleave', ()=>a3.hide())
-  
-        addressCaste.current?.removeEventListener('mouseenter', ()=>a4.show())
-        addressCaste.current?.removeEventListener('mouseleave', ()=>a4.hide())
-  
-        webApp.current?.removeEventListener('mouseenter', ()=>a5.show())
-        webApp.current?.removeEventListener('mouseleave', ()=>a5.hide())
-        
-        dataDemands.current?.removeEventListener('mouseenter', ()=>a6.show())
-        dataDemands.current?.removeEventListener('mouseleave', ()=>a6.hide())
-  
-        UXRole.current?.removeEventListener('mouseenter', ()=>a7.show())
-        UXRole.current?.removeEventListener('mouseleave', ()=>a7.hide())
-  
-        designJustice.current?.removeEventListener('mouseenter', ()=>a8.show())
-        designJustice.current?.removeEventListener('mouseleave', ()=>a8.hide())
-  
-        workJD.current?.removeEventListener('mouseenter', ()=>a9.show())
-        workJD.current?.removeEventListener('mouseleave', ()=>a9.hide())
-  
-        passionApply.current?.removeEventListener('mouseenter', ()=>a10.show())
-        passionApply.current?.removeEventListener('mouseleave', ()=>a10.hide())
-  
-        emailID.current?.removeEventListener('mouseenter', ()=>a11.show())
-        emailID.current?.removeEventListener('mouseleave', ()=>a11.hide())
+    })
 
-        
-        a1.remove()
-        a2.remove()
-        a3.remove()
-        a4.remove()
-        a5.remove()
-        a6.remove()
-        a7.remove()
-        a8.remove()
-        a9.remove()
-        a10.remove()
-        a11.remove()
-      }
+    return () => {
+      cleanupFunctions.forEach(cleanup => cleanup())
     }
   }, [])
   
