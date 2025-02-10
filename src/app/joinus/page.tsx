@@ -119,7 +119,7 @@ const Home = () => {
                     <h6 className="text-xs inline-block uppercase p-1">Responsibilities</h6>
                     {opening.responsibilities.map((desc : Description) => (
                       (Object.keys(desc).map(key => (
-                        <li key={key} className='text-xs p-[2px] pl-4'><span className='hover:italics'>{key}</span>: {desc[key]}</li>
+                        <li key={key} className='text-xs p-[2px] pl-4'><span className=''>{key}</span>: {desc[key]}</li>
                       )))
                     ))}
                   </div>
@@ -127,7 +127,7 @@ const Home = () => {
                     <h6 className="text-xs inline-block uppercase p-1 rounded-sm">Outcomes</h6>
                     {opening.desiredOutcomes.map((desc : Description) => (
                       (Object.keys(desc).map(key => (
-                        <li key={key} className='text-xs p-[2px] pl-4'><span className='hover:italics'>{key}</span>: {desc[key]}</li>
+                        <li key={key} className='text-xs p-[2px] pl-4'><span className=''>{key}</span>: {desc[key]}</li>
                       )))
                     ))}
                   </div>
@@ -135,12 +135,16 @@ const Home = () => {
                     <h6 className="text-xs inline-block uppercase p-1">Skills</h6>
                     
                     {opening.skills.map((skill : SkillCategory) => (
-                      Object.keys(skill).map(() => (
-                        Object.entries(skill).map(([key, skillList]) => (
-                          skillList?.map((desc: Description) =>  (
-                          Object.keys(desc).map(point => (
-                            <li key={point} className='text-xs p-[2px] pl-4'><span className='hover:italics'>{point}</span>: {desc[point]} <span className='opacity-50 italic'>{key == "essentialSkills" ? "essential skill" : "beneficial skill"}</span></li>
-                          ))))
+                      Object.entries(skill).map(([key, skillList]) => (
+                        skillList?.map((desc: Description) => (
+                          Object.entries(desc).map(([point, pointDesc]) => (
+                            <li key={point} className='text-xs p-[2px] pl-4'>
+                              <span className=''>{point}</span>: {pointDesc} 
+                              <span className='opacity-50 italic'>
+                                {key == "essentialSkills" ? " essential skill" : " beneficial skill"}
+                              </span>
+                            </li>
+                          ))
                         ))
                       ))
                     ))}
@@ -154,7 +158,7 @@ const Home = () => {
           <div className="sub-container">
             <h5 className="sub-title-container">To Apply:</h5>
             <p className="sub-text-container">We strongly encourage applications from individuals from Systematically Oppressed Communities & Regions (SOCR). We believe that diverse perspectives are essential to creating inclusive and equitable designs, and we are committed to building a team that reflects the communities we serve.  Your lived experience and unique insights are valuable and will be considered an asset to our team.  We understand that traditional pathways to design roles may not always be accessible, and considere a range of experiences and skill sets. <span ref={passionApply}>If you are passionate about design for social justice, we encourage you to apply, even if you don&apos;t meet every listed qualification.</span></p>
-            <p className='sub-text-container'>Please write to <span ref={emailID} className='underline'>ambedkarreadingcircle.bangalore@gmail.com</span> with a cover letter (200-400 words) and subject line &quot;UI/UX Designer Application - ARC Dramas of Discrimination.&quot;</p>
+            <p className='sub-text-container'>Please write to <span ref={emailID} className='underline'>ambedkarreadingcircle.bangalore@gmail.com</span> with a cover letter (200-400 words) and subject line &quot;Role Title - ARC Dramas of Discrimination.&quot;</p>
           </div>
         </div>
     </div>
