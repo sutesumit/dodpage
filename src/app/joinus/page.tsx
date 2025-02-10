@@ -85,8 +85,8 @@ const Home = () => {
   }, [])
   
   return (
-    <div className='page pt-14 flex justify-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
-        <div className='page-container my-2 relative font-body text-sm text-center scroll-smooth overflow-x-hidden'>
+    <div className='page pt-12 flex justify-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
+        <div className='page-container z-0 my-2 relative font-body text-sm text-center scroll-smooth overflow-x-hidden'>
           <div className='title-container'>
           <p className='border-[1px] border-[var(--primary-blue)] my-2 py-2 px-3 rounded-md text-xs'>Come along and let&apos;s bring the Dramas of Discrimination web application to life.</p>
             <p className='text-xs p-2 opacity-50 italic'>Roles currently reserved for IIHS Urban Fellows:</p>
