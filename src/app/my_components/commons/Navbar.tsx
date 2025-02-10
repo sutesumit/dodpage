@@ -43,7 +43,7 @@ const Navbar = () => {
                 transition={{ duration: 0.1, ease: 'easeOut' }}
               >
                 <Link href="/"><li className='nav-btn'>Home</li></Link>
-                <Link href="/"><li className='nav-btn'>Gallery</li></Link>
+                <Link href="/gallery"><li className='nav-btn'>Gallery</li></Link>
                 <Link href="/facilitator"><li className='nav-btn'>Facilitator</li></Link>
                 <Link href="/resources"><li className='nav-btn'>Resources</li></Link>
                 <Link href="/joinus"><li className='nav-btn'>Join Us</li></Link>
