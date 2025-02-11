@@ -42,7 +42,7 @@ body {
   }
 
   .nav-btn {
-    @apply px-2 py-2 rounded-md text-[var(--primary-white)] bg-[var(--primary-blue)] self-center text-center transition-all duration-300;
+    @apply px-2 py-2 rounded-md text-[var(--primary-white)] bg-[var(--primary-blue)] self-center text-center opacity-75 transition-all duration-300;
   }
 
   .nav-btn:hover {

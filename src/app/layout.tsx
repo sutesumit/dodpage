@@ -4,6 +4,7 @@ import "@fontsource/cascadia-mono"
 import "./globals.css";
 import Image from 'next/image'
 import Navbar from "./my_components/commons/Navbar";
+import Newnav from "./my_components/commons/Newnav";
 
 
 const italianno = Italianno({
@@ -36,7 +37,7 @@ export default function RootLayout({
         className={`${italianno.className} ${miriam.className} antialiased text-[var(--primary-white)]`}
       >
         <div className="relative items-center justify-center h-screen w-screen p-10">
-          <Navbar />
+          <Newnav />
            {children}
         </div>
         <div className="bg-image bg-[var(--primary-white)] absolute -z-10 inset-0 overflow-hidden">
