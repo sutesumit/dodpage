@@ -24,8 +24,6 @@ const Navbar = () => {
           key='toggle-nav'
           className='m-auto flex text-center items-center justify-between'
           onMouseEnter={() => setOpenMenu(true)}
-          onTouchStart={() => setOpenMenu(true)}
-
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           exit={{ y: 100 }}
@@ -35,8 +33,9 @@ const Navbar = () => {
               <p className="text-[1.25em] leading-[1em] text-left">Dramas<span className="font-of text-[2.5em] leading-[1em] p-[2px]">of </span>Discrimination</p>
               <div 
                 className='text-base p-1'
+                onClick={toggleMenu}
               >
-                <FiMenu />
+                { !openMenu ? <FiMenu /> : <RiCloseFill /> }
               </div>
             </div>
           </motion.ul>
@@ -65,7 +64,7 @@ const Navbar = () => {
       {
         openMenu &&
         <div
-          className='absolute inset-0 z-10 cursor-crosshair'
+          className='absolute inset-0 z-10 cursor-not-allowed'
           onMouseEnter={toggleMenu}
           onTouchStart={toggleMenu}
         >

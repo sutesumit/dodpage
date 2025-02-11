@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Loading = () => {
   return (
     <div
-      className="fixed inset-0 flex flex-col justify-center items-center bg-opacity-50 bg-white backdrop-blur-sm z-50"
+      className="page flex flex-col justify-center items-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]"
     >
       <div className='animate-spin'>
         <Image src="/ashoka-chakra.svg" alt="ashoka-chakra" width={40} height={40} />
