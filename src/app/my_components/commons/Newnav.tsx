@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { RiCloseFill } from "react-icons/ri";
+import { BiCollapseVertical } from "react-icons/bi";
 import { FiMenu } from "react-icons/fi";
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -16,7 +16,11 @@ const Navbar = () => {
   return (
     <>
       <motion.nav 
-        className='absolute top-10 z-20 left-[50vw] -translate-x-[50%] w-[calc(100%-5rem)] max-w-[30ch] mt-1 p-1 rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900 text-xs cursor-pointer'
+        className='absolute left-1/2 -translate-x-1/2 top-10 z-20 w-[calc(100%-5rem)] max-w-[30ch] mt-1 p-1 rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900 text-xs'
+        drag
+        dragMomentum={false}
+        dragElastic={10}
+        style={{ cursor: 'move' }}
       >
           {
           <motion.ul
@@ -34,7 +38,7 @@ const Navbar = () => {
                 className='text-base p-1'
                 onClick={toggleMenu}
               >
-                { !openMenu ? <FiMenu /> : <RiCloseFill /> }
+                { !openMenu ? <FiMenu /> : <BiCollapseVertical /> }
               </div>
             </div>
           </motion.ul>
@@ -44,9 +48,9 @@ const Navbar = () => {
               <motion.ul
                 key='nav checkbox'
                 className='m-auto justify-center items-center'
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
                 onClick={toggleMenu}
 
