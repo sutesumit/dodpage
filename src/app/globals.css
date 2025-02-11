@@ -10,6 +10,8 @@
 
 body {
 
+    background: var(--primary-white);
+
     .scrollbar-thin {
       scrollbar-width: thin;
     }

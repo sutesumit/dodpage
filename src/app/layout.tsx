@@ -3,7 +3,6 @@ import { Italianno, Miriam_Libre } from "next/font/google";
 import "@fontsource/cascadia-mono"
 import "./globals.css";
 import Image from 'next/image'
-import Navbar from "./my_components/commons/Navbar";
 import Newnav from "./my_components/commons/Newnav";
 
 

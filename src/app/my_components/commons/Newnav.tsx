@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { RiCloseFill } from "react-icons/ri";
 import { FiMenu } from "react-icons/fi";
 import { motion, AnimatePresence } from 'framer-motion'
-import ArcLogo from "../elements/ARCLogo";
 
 const Navbar = () => {
 
