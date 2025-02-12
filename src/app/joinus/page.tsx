@@ -112,8 +112,8 @@ const Home = () => {
 
           <div className="sub-container flex flex-col gap-2">
             {AllOpeningsData.map((opening: Opening, index) => (
-              <div key={index} className="opening-card border-[1px] border-[var(--primary-blue)] border-dashed rounded-lg overflow-hidden">
-                <h5 id={opening.title} className="sub-title-container scroll-m-11 text-center text-xs border-b-[1px] border-[var(--primary-blue)] border-dashed uppercase tracking-wide">{opening.title}</h5>
+              <div key={index} className="opening-card border-[1px] border-[var(--primary-blue)] border-dotted rounded-lg overflow-hidden">
+                <a id={opening.title} href={`#${opening.title}`} className="block p-1 font-bold sub-title-container scroll-m-11 text-center text-xs border-b-[1px] border-[var(--primary-blue)] border-dotted uppercase tracking-wide">{opening.title}</a>
                 <div className="sub-text-container flex flex-col gap-1 p-1">
                   <div className="responsibilities flex-1">
                     <h6 className="text-xs inline-block uppercase p-1">Responsibilities</h6>
