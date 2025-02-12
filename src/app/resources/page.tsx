@@ -14,6 +14,7 @@ const Home = () => {
           height={100}
           size="stretch"
           style = {{width: '100%', height: '100%'}}
+          
         >
           {Array.from({ length: 25}, (_, index)  => (
             <div key={index} className="page">

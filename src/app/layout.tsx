@@ -36,7 +36,9 @@ export default function RootLayout({
         className={`${italianno.className} ${miriam.className} antialiased text-[var(--primary-white)]`}
       >
         <div className="relative items-center justify-center h-screen w-screen p-10">
-          <Newnav />
+          <div className="absolute flex justify-center items-center top-10 w-[calc(100%-5rem)]">
+            <Newnav />
+          </div>
            {children}
         </div>
         <div className="bg-image bg-[var(--primary-white)] absolute -z-10 inset-0 overflow-hidden">

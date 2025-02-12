@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <motion.nav 
-        className='absolute left-1/2 -translate-x-1/2 top-10 z-20 w-[calc(100%-5rem)] max-w-[30ch] mt-1 p-1 rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900 text-xs'
+        className='w-auto max-w-[30ch] justify-between items-center z-50 mt-1 p-1 rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900 text-xs'
         drag
         dragMomentum={false}
         dragElastic={10}
@@ -26,16 +26,15 @@ const Navbar = () => {
           <motion.ul
           key='toggle-nav'
           className='m-auto flex text-center items-center justify-between'
-          onMouseEnter={() => setOpenMenu(true)}
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ duration: 0.3 }}
           >
-            <div className='object-contain flex items-center gap-2 w-full justify-between px-2 text-[0.5rem] nav-btn'>
-              <p className="text-[1.25em] leading-[1em] text-left">Dramas<span className="font-of text-[2.5em] leading-[1em] p-[2px]">of </span>Discrimination</p>
+            <div className='object-contain flex items-center gap-2 w-full justify-between px-2 text-[0.5rem]'>
+              <p className="text-[1.25em] leading-[1em] text-left nav-btn">Dramas<span className="font-of text-[2.5em] leading-[1em] p-[2px]">of </span>Discrimination</p>
               <div 
-                className='text-base p-1'
+                className='text-base p-2 cursor-pointer nav-btn'
                 onClick={toggleMenu}
               >
                 { !openMenu ? <FiMenu /> : <BiCollapseVertical /> }
