@@ -158,7 +158,7 @@ const Home = () => {
           <div className="sub-container">
             <h5 className="sub-title-container">To Apply:</h5>
             <p className="sub-text-container">We strongly encourage applications from individuals from Systematically Oppressed Communities & Regions (SOCR). We believe that diverse perspectives are essential to creating inclusive and equitable designs, and we are committed to building a team that reflects the communities we serve.  Your lived experience and unique insights are valuable and will be considered an asset to our team.  We understand that traditional pathways to design roles may not always be accessible, and considere a range of experiences and skill sets. <span ref={passionApply}>If you are passionate about design for social justice, we encourage you to apply, even if you don&apos;t meet every listed qualification.</span></p>
-            <p className='sub-text-container'>Please write to <span ref={emailID} className='underline'>ambedkarreadingcircle.bangalore@gmail.com</span> with a cover letter (200-400 words) and subject line &quot;Role Title - ARC Dramas of Discrimination.&quot;</p>
+            <p className='sub-text-container'>Please write to <span ref={emailID} className='break-all underline font-mono'>ambedkarreadingcircle.bangalore@gmail.com</span> with a cover letter (200-400 words) and subject line &quot;Role Title - ARC Dramas of Discrimination.&quot;</p>
           </div>
         </div>
     </div>
