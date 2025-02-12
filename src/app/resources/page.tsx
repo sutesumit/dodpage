@@ -27,7 +27,7 @@ const Home = () => {
             </div> ))}
         </HTMLFlipBook>}
       </div> 
-      <h5 className='text-xs text-center p-2 opacity-75 before:content-["-"] after:content-["-"]'>Click to leaf through the Dramas of Discrimination Workshop Facilitation Manual. We soon intend to make the download available.</h5> 
+      <h5 className='text-xs text-center p-2 opacity-75 before:content-["-"] after:content-["-"]'>Click to leaf through the Dramas of Discrimination Workshop Facilitation Manual. We soon intend to make the <span className='p-1 opacity-75 border-[0.25px] border-[var(--primary-white)] rounded-md cursor-wait'>Download</span> available.</h5> 
     </div>
   )
 }
