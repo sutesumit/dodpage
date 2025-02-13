@@ -2,7 +2,8 @@ import React from 'react'
 
 const AboutCards = () => {
   return (
-    <div className="about-section w-full min-h-[calc(100vh-5rem)] flex justify-center bg-[var(--primary-white)] text-[var(--primary-blue)]">
+    <div className="about-section w-full min-h-[calc(100vh-5rem)] flex flex-col p-5 justify-center bg-[var(--primary-white)] text-[var(--primary-blue)]">
+        <div className="about-title text-center text-xs uppercase">About Us</div>
         <div className="about-cards mx-auto my-4 grid grid-cols-2 max-w-[100ch] text-xs gap-4">
             <div className="about arc-about">
             <h5>Ambedkar Reading Circle</h5>
