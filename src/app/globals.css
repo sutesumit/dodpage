@@ -78,4 +78,11 @@ body {
   .about p {
     @apply p-2;
   }
+
+  .dod-log-wrapper {
+    @apply text-left w-full;
+    @layer {
+      font-size: clamp(1rem, 6vw, 6rem);
+    }
+  }
 }

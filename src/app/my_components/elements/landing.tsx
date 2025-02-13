@@ -1,0 +1,24 @@
+import React from 'react'
+import ARCLogo from '../elements/ARCLogo'
+import DodLogo from '../elements/DodLogo'
+
+const Landing = () => {
+  return (
+    <div className="landing relative w-full h-full bg-[var(--primary-blue)]">
+        <div className='flex justify-center md:justify-end w-auto h-full p-5'>
+            <div className='m-auto'>
+                <div className="font-title w-auto flex flex-col items-start justify-start">
+                    <ARCLogo />
+                    <div className="text-xs p-1 opacity-75">presents</div>
+                    <div className="dod-log-wrapper w-auto">
+                        <DodLogo />
+                    </div>
+                    <p className="font-body bottom-10 text-xs opacity-70">A participatory workshop for dialogue, reflection, and action towards a more just and inclusive society.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Landing

@@ -1,18 +1,14 @@
 'use client';
 import DodLogo from "./my_components/elements/DodLogo";
 import ARCLogo from "./my_components/elements/ARCLogo";
+import Landing from "./my_components/elements/landing";
 
 export default function Home() {
   return (
       <>
-        <div className="page pt-16 pb-4 bg-[var(--primary-blue)] w-full h-full rounded-md overflow-scroll checkbox">
-          <div className="container m-auto flex flex-col gap-4 justify-center items-center">
-            <div className="flex flex-col justify-center gap-2 items-center font-title text-xl p-2">
-              <ARCLogo />
-              <div className="text-xs opacity-75">presents</div>
-              <DodLogo />
-            </div>
-            <p className="font-body bottom-10 text-xs max-w-[80ch] text-center opacity-70">A participatory workshop for dialogue, reflection, and action towards a more just and inclusive society.</p>
+        <div className="page bg-[var(--primary-blue)] w-full h-full rounded-md overflow-scroll checkbox">
+          <Landing />
+          <div className="relative container m-auto flex flex-col gap-4 justify-center items-center">
             <div className="about-cards m-2 flex flex-col max-w-[70ch] text-xs gap-4">
               <div className="about arc-about">
                 <h5>Ambedkar Reading Circle</h5>
