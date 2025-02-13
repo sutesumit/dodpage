@@ -100,16 +100,10 @@ const Home = () => {
           <div className="sub-container my-3 border-[1px] border-[var(--primary-blue)] border-dotted rounded-md">
             <p className="sub-text-container">You don&apos;t need to have every skill listed in this description.  The ARC has always been a journey driven by necessity, passion, and community support. <span ref={approachValues}>We often found ourselves doing several things for the first time, approaching challenges with first-principles thinking, immense curiosity, and humility.</span> Our deep engagement with our context and needs has always empowered us to find solutions, even when lacking specific skills. If this dynamic and collaborative environment resonates with you, come get in touch!</p>
           </div>
-          <div className="sub-container">
-            <h5 className="sub-title-container">About ARC and Dramas of Discrimination</h5>
-            <p className="sub-text-container">The Ambedkar Reading Circle (ARC) Bangalore, founded in April 2023, is an anti-caste collective. ARC organizes reading circles, workshops, talks, and film screenings in Bengaluru <span ref={visionARC}>with the vision of making anti-caste worldviews more accessible and mainstream</span> in public spaces and public consciousness. Regular reading circles are often held in Cubbon Park. ARC has actively collaborated with organizations such as the Alternative Law Forum, Hasiru Dala, the Museum of Art and Photography, the Bangalore International Center, and the Foundation of Art and Health India.</p>
-            <p className="sub-text-container">Dramas of Discrimination is an interactive, art-based workshop that utilizes a <span ref={dodApproach}>combined approach of systems thinking and Theatre of the Oppressed</span> to foster more just and inclusive work environments through interactive and participatory methods. The workshop aims to cultivate and advocate for <span ref={addressCaste}>proactive engagement in addressing caste-based discrimination</span> in Indian workplaces and places of higher education, creating a platform for rehearsing change. The design of Dramas of Discrimination was informed by the desire to simplify the understanding of systemic interventions and foster values of fraternity, inclusivity, and belonging through carefully designed workshop exercises.</p>
-          </div>
-          <div className="sub-container">
-            <h5 className="sub-title-container" >Dramas of Discrimination Web Application</h5>
-            <p className="sub-text-container">With the goal of creating an open-source web application for communities and student groups to independently access and facilitate Dramas of Discrimination workshops, the Ambedkar Reading Circle is currently converting the existing <span ref={webApp}>Dramas of Discrimination facilitation manual into an interactive web application.</span> While the web application&apos;s core function is to serve as an online facilitation guide for the in-person workshop, it will also function as a repository for workshop exercise materials and a data portal. <span ref={dataDemands}>Each workshop instance can be submitted as a case study, including a charter of demands from the participating communities,</span> which will inform a general manifesto of inclusion driven by constitutional values.</p>
-          </div>
-
+          <div className="all-roles flex flex-wrap justify-center items-center gap-2 text-xs">
+            <p>Curious? Visit our home page to know more:</p>
+              <a className='bg-[var(--primary-blue)] text-[var(--primary-white)] py-1 px-3 rounded-md' href={`/#aboutus`}>About Us</a>
+            </div>
           <div className="sub-container flex flex-col gap-2">
             {AllOpeningsData.map((opening: Opening, index) => (
               <div key={index} className="opening-card border-[1px] border-[var(--primary-blue)] border-dotted rounded-lg overflow-hidden">
