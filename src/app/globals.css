@@ -68,11 +68,11 @@ body {
   }
 
   .about {
-    @apply border-[1px] border-[var(--primary-white)] border-dashed rounded-lg
+    @apply border-[1px] border-[var(--primary-blue)] border-dashed rounded-lg
   }
 
   .about h5 {
-    @apply font-bold text-center border-b-[1px] border-[var(--primary-white)] border-dashed p-2
+    @apply font-bold text-center border-b-[1px] border-[var(--primary-blue)] border-dashed p-2
   }
 
   .about p {
