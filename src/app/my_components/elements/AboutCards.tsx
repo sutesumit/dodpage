@@ -59,12 +59,15 @@ const AboutCards = () => {
             const mouseEnterHandler = () => annotation.show()
             const mouseLeaveHandler = () => annotation.hide()
 
-            config.parent.current?.addEventListener('mouseenter', mouseEnterHandler)
-            config.parent.current?.addEventListener('mouseleave', mouseLeaveHandler)
+            const parent = config.parent.current
+            if (!parent) return
+
+            parent.addEventListener('mouseenter', mouseEnterHandler)
+            parent.addEventListener('mouseleave', mouseLeaveHandler)
 
             cleanupFunctions.push(() => {
-                config.parent.current?.removeEventListener('mouseenter', mouseEnterHandler)
-                config.parent.current?.removeEventListener('mouseleave', mouseLeaveHandler)
+                parent.removeEventListener('mouseenter', mouseEnterHandler)
+                parent.removeEventListener('mouseleave', mouseLeaveHandler)
                 annotation.remove()
             })
 
