@@ -6,7 +6,7 @@ import Landing from "./my_components/elements/landing";
 export default function Home() {
   return (
       <>
-        <div className="page bg-[var(--primary-blue)] w-full h-full rounded-md overflow-scroll checkbox">
+        <div className="page bg-[var(--primary-blue)] w-full h-full rounded-md overflow-y-scroll checkbox">
           <Landing />
           <div className="relative container m-auto flex flex-col gap-4 justify-center items-center">
             <div className="about-cards m-2 flex flex-col max-w-[70ch] text-xs gap-4">

@@ -79,10 +79,10 @@ body {
     @apply p-2;
   }
 
-  .dod-log-wrapper {
+  .dod-logo-wrapper {
     @apply text-left w-full;
     @layer {
-      font-size: clamp(1rem, 6vw, 6rem);
+      font-size: clamp(1rem, 5vw, 5rem);
     }
   }
 }

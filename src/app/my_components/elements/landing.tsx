@@ -10,10 +10,10 @@ const Landing = () => {
                 <div className="font-title w-auto flex flex-col items-start justify-start">
                     <ARCLogo />
                     <div className="text-xs p-1 opacity-75">presents</div>
-                    <div className="dod-log-wrapper w-auto">
+                    <div className="dod-logo-wrapper my-4 w-auto">
                         <DodLogo />
                     </div>
-                    <p className="font-body bottom-10 text-xs opacity-70">A participatory workshop for dialogue, reflection, and action towards a more just and inclusive society.</p>
+                    <p className="font-body text-xs opacity-70">A participatory workshop for dialogue, reflection, and action towards a more just and inclusive society.</p>
                 </div>
             </div>
         </div>
