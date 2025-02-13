@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useMemo } from 'react'
 import { annotate } from 'rough-notation'
 
 type AnnotationType = 'underline' | 'box' | 'circle' | 'highlight' | 'strike-through' | 'crossed-off' | 'bracket';
@@ -30,18 +30,21 @@ const AboutCards = () => {
     const DodAppRef = useRef<HTMLDivElement>(null)
 
 
-    const annotationConfigs: AnnotationConfig[] = [
+    const annotationConfigs = useMemo<AnnotationConfig[]>(() => [
         { ref: ARCVisionRef, parent: ARCAboutRef, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
         { ref: DodApproachRef, parent: DodAboutRef, type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
         { ref: DodObjectiveRef, parent: DodAboutRef, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
         { ref: DodAppFuncRef, parent: DodAppRef, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
         { ref: DataPortalRef, parent: DodAppRef, type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
         { ref: CharterRef, parent: DodAppRef, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-    ];
+    ], []);
 
-    const cleanupFunctions: (() => void)[] = []
+    
 
     useEffect(() => {
+
+        const cleanupFunctions: (() => void)[] = []
+
         annotationConfigs.forEach((config) => {
             const current = config.ref.current
             if (!current) return
@@ -68,10 +71,10 @@ const AboutCards = () => {
         })
 
         return () => {
-            cleanupFunctions.forEach(fn => fn())
+            cleanupFunctions.forEach(cleanup => cleanup())
         }
 
-        }, []);
+        }, [annotationConfigs]);
 
   return (
     <div id="aboutus" className="about-section w-full min-h-[calc(100vh-5rem)] flex flex-col px-5 justify-center bg-[var(--primary-white)] text-[var(--primary-blue)]">
