@@ -1,10 +1,10 @@
 import React from 'react'
-import ARCLogo from '../elements/ARCLogo'
-import DodLogo from '../elements/DodLogo'
+import ARCLogo from './ARCLogo'
+import DodLogo from './DodLogo'
 
 const Landing = () => {
   return (
-    <div className="landing relative w-full h-full bg-[var(--primary-blue)]">
+    <div className="landing relative w-full h-[calc(100vh-5rem)] bg-[var(--primary-blue)]">
         <div className='flex justify-center md:justify-end w-auto h-full p-5'>
             <div className='m-auto'>
                 <div className="font-title w-auto flex flex-col items-start justify-start">
