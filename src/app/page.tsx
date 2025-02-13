@@ -1,4 +1,3 @@
-'use client';
 import Landing from "./my_components/elements/Landing";
 import AboutCards from "./my_components/elements/AboutCards";
 import LandingVideo from "./my_components/elements/LandingVideo";
