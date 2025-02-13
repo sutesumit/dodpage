@@ -18,16 +18,16 @@ interface AnnotationConfig {
 
 const AboutCards = () => {
 
-    const ARCVisionRef = useRef<HTMLElement>(null)
-    const DodApproachRef = useRef<HTMLElement>(null)
-    const DodObjectiveRef = useRef<HTMLElement>(null)
-    const DodAppFuncRef = useRef<HTMLElement>(null)
-    const DataPortalRef = useRef<HTMLElement>(null)
-    const CharterRef = useRef<HTMLElement>(null)
+    const ARCVisionRef = useRef<HTMLElement | null>(null)
+    const DodApproachRef = useRef<HTMLElement | null>(null)
+    const DodObjectiveRef = useRef<HTMLElement | null>(null)
+    const DodAppFuncRef = useRef<HTMLElement | null>(null)
+    const DataPortalRef = useRef<HTMLElement | null>(null)
+    const CharterRef = useRef<HTMLElement | null>(null)
 
-    const ARCAboutRef = useRef<HTMLDivElement>(null)
-    const DodAboutRef = useRef<HTMLDivElement>(null)
-    const DodAppRef = useRef<HTMLDivElement>(null)
+    const ARCAboutRef = useRef<HTMLDivElement | null>(null)
+    const DodAboutRef = useRef<HTMLDivElement | null>(null)
+    const DodAppRef = useRef<HTMLDivElement | null>(null)
 
 
     const annotationConfigs = useMemo<AnnotationConfig[]>(() => [
