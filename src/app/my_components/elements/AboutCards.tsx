@@ -58,7 +58,6 @@ const AboutCards = () => {
 
             config.parent.current?.addEventListener('mouseenter', mouseEnterHandler)
             config.parent.current?.addEventListener('mouseleave', mouseLeaveHandler)
-            
 
             cleanupFunctions.push(() => {
                 config.parent.current?.removeEventListener('mouseenter', mouseEnterHandler)
@@ -67,6 +66,11 @@ const AboutCards = () => {
             })
 
         })
+
+        return () => {
+            cleanupFunctions.forEach(fn => fn())
+        }
+
         }, []);
 
   return (
@@ -95,7 +99,7 @@ const AboutCards = () => {
                 ref={DodAppRef}
             >
                 <h5>Dramas of Discrimination Web App</h5>
-                <p>With the goal of creating an open-source web application for communities and student groups to independently access and facilitate Dramas of Discrimination workshops, the Ambedkar Reading Circle is currently converting the existing Dramas of Discrimination facilitation manual into an interactive web application. While <span ref={DodAppFuncRef}>the web application's core function is to serve as an online facilitation guide for the in-person workshop</span>, it will also function as a repository for workshop exercise materials and <span ref={DataPortalRef}>a data portal.</span> Each workshop instance can be submitted as a case study, including <span ref={CharterRef}>a charter of demands from the participating communities, which will inform a general manifesto of inclusion</span> driven by constitutional values.</p>
+                <p>With the goal of creating an open-source web application for communities and student groups to independently access and facilitate Dramas of Discrimination workshops, the Ambedkar Reading Circle is currently converting the existing Dramas of Discrimination facilitation manual into an interactive web application. While <span ref={DodAppFuncRef}>the web application&apos;s core function is to serve as an online facilitation guide for the in-person workshop</span>, it will also function as a repository for workshop exercise materials and <span ref={DataPortalRef}>a data portal.</span> Each workshop instance can be submitted as a case study, including <span ref={CharterRef}>a charter of demands from the participating communities, which will inform a general manifesto of inclusion</span> driven by constitutional values.</p>
             </div>
         </div>
     </div>

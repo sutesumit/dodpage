@@ -1,7 +1,6 @@
 'use client';
 import Landing from "./my_components/elements/Landing";
 import AboutCards from "./my_components/elements/AboutCards";
-import Gallery from "./gallery/page";
 import LandingVideo from "./my_components/elements/LandingVideo";
 import Footer from "./my_components/elements/Footer";
 
