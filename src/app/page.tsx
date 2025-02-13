@@ -1,6 +1,6 @@
-import Landing from "./my_components/elements/Landing";
 import AboutCards from "./my_components/elements/AboutCards";
 import LandingVideo from "./my_components/elements/LandingVideo";
+import Landing from "./my_components/elements/Landing";
 import Footer from "./my_components/elements/Footer";
 
 export default function Home() {
