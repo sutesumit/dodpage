@@ -20,12 +20,6 @@ interface AnnotationConfig {
 const Home = () => {
 
   const approachValues = useRef<HTMLElement>(null)
-  const visionARC = useRef<HTMLElement>(null)
-  const dodApproach = useRef<HTMLElement>(null)
-  const addressCaste = useRef<HTMLElement>(null)
-  const webApp = useRef<HTMLElement>(null)
-  const dataDemands = useRef<HTMLElement>(null)
-  const UXRole = useRef<HTMLElement>(null)
   const designJustice = useRef<HTMLElement>(null)
   const workJD = useRef<HTMLElement>(null)
   const passionApply = useRef<HTMLElement>(null)
@@ -36,12 +30,6 @@ const Home = () => {
 
     const annotationConfigs: AnnotationConfig[] = [
       { ref: approachValues, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-      { ref: visionARC, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-      { ref: dodApproach, type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-      { ref: addressCaste, type: 'box', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-      { ref: webApp, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-      { ref: dataDemands, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
-      { ref: UXRole, type: 'highlight', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
       { ref: designJustice, type: 'circle', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
       { ref: workJD, type: 'bracket', brackets: ['left', 'right'], color: '#87aae6', multiline: true, padding: 0, animationDuration: 500 },
       { ref: passionApply, type: 'underline', color: '#87aae6', multiline: true, padding: 1, animationDuration: 500 },
