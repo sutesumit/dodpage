@@ -10,7 +10,7 @@ const LandingVideo = () => {
     
   return (
     <div>
-      <div className="w-full h-[calc(100vh-5rem)] bg-[var(--primary-white)] p-5 rounded-md overflow-clip">
+      <div className="w-full h-[calc(100vh-5rem)] bg-[var(--primary-white)] p-5 overflow-clip">
         {isLoading ? <Loading /> : null}
         <iframe
           className="w-full h-full rounded-md"
