@@ -15,8 +15,35 @@ const Navbar = () => {
 
   return (
     <>
+
+      {/* Full Screen Navigation Menu */}
+
+      <nav className='full-nav w-full text-current hidden sm:block text-xs rounded-md z-50'>
+        <AnimatePresence mode='popLayout'>
+              <motion.ul
+                key='nav'
+                className='flex gap-1 p-1 items-baseline justify-between w-full'
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                onClick={toggleMenu}
+
+              >
+                <Link href="/"><li className='nav-btn'><p className="text-[1em] text-left">Dramas<span className="font-of text-[2.5em] leading-[1em] p-[2px]">of </span>Discrimination</p></li></Link>
+                <div  className='flex gap-1 p-1 items-baseline justify-between'>
+                  <Link href="/gallery"><li className='nav-btn'>Gallery</li></Link>
+                  <Link href="/facilitator"><li className='nav-btn'>Facilitator</li></Link>
+                  <Link href="/resources"><li className='nav-btn'>Resources</li></Link>
+                  <Link href="/joinus"><li className='nav-btn'>Join Us</li></Link>
+                </div>
+              </motion.ul>
+          </AnimatePresence>
+      </nav>
+
+      {/* Mobile Navigation Menu */}
       <motion.nav 
-        className='w-auto max-w-[30ch] justify-between items-center z-50 mt-1 p-1 rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900 text-xs overflow-hidden'
+        className='mobile-nav block sm:hidden w-auto max-w-[30ch] justify-between items-center z-50 mt-1 p-1 rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900 text-xs overflow-hidden'
         drag
         dragMomentum={false}
         dragElastic={10}
