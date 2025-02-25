@@ -1,8 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Logo](/ARC_DoD_Banner_Logo.png)
 
-## Getting Started
+# Dramas of Discrimination
+A web facilitator for a participatory workshop focused on dialogue, reflection, and action toward fostering more just and inclusive communities in higher education institutions and workplaces.
 
-First, run the development server:
+---
+
+[![Static Badge](https://img.shields.io/badge/🔗-Live-blue?style=flat-square&)](https://www.dod.sumitsute.com/) [![Static Badge](https://img.shields.io/badge/</>-Repo-blue?style=flat-square)](https://github.com/sutesumit/dodpage)
+
+
+## Discription
+
+The Ambedkar Reading Circle is developing an open-source web app to help communities and student groups independently access and facilitate Dramas of Discrimination workshops. This app will serve as an online facilitation guide, a repository for workshop materials, and a data portal.
+
+Workshops can be submitted as case studies, including a charter of demands from participants, contributing to a broader manifesto of inclusion rooted in constitutional values.
+
+## Screenshots
+
+![App Screenshot](/Screenshot 2025-02-25 190847.jpg)
 
 ```bash
 npm run dev
