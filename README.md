@@ -23,7 +23,7 @@ The **Ambedkar Reading Circle** is developing this open-source web app to enable
 
 ![Current Landing Page](/Screenshot_2025-02-25_190847.jpg) Current Landing Page
 
-![Web Facilitator](/Screenshot_2025-02-25_191344.jpg) Web Facilitator
+![Web Facilitator](/Screenshot_2025-02-25_191344.jpg) Web Facilitator Under Construction
 
 ## Requirements  
 
