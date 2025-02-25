@@ -1,50 +1,93 @@
 ![Logo](/ARC_DoD_Banner_Logo.png)
 
-# Dramas of Discrimination
-A web facilitator for a participatory workshop focused on dialogue, reflection, and action toward fostering more just and inclusive communities in higher education institutions and workplaces.
+# Dramas of Discrimination Web App
+A web-based facilitator for a participatory workshop designed to foster dialogue, reflection, and action towards building more just and inclusive communities in higher education institutions and workplaces.
 
 ---
 
 [![Static Badge](https://img.shields.io/badge/🔗-Live-blue?style=flat-square&)](https://www.dod.sumitsute.com/) [![Static Badge](https://img.shields.io/badge/</>-Repo-blue?style=flat-square)](https://github.com/sutesumit/dodpage)
 
 
-## Discription
+## Overview
 
-The Ambedkar Reading Circle is developing an open-source web app to help communities and student groups independently access and facilitate Dramas of Discrimination workshops. This app will serve as an online facilitation guide, a repository for workshop materials, and a data portal.
+The **Ambedkar Reading Circle** is developing this open-source web app to enable communities and student groups to independently access and facilitate **Dramas of Discrimination** workshops. The platform serves multiple purposes:
 
-Workshops can be submitted as case studies, including a charter of demands from participants, contributing to a broader manifesto of inclusion rooted in constitutional values.
+- **Facilitation Guide:** Provides structured guidance for conducting in-person workshops.
+- **Resource Repository:** Stores workshop materials and exercises for easy access.
+- **Data Portal:** Allows submission of workshop case studies, including charters of demands from participants.
+- **Manifesto of Inclusion:** Aggregates insights to contribute to a broader manifesto rooted in constitutional values.
+
 
 ## Screenshots
 
-![App Screenshot](/Screenshot 2025-02-25 190847.jpg)
 
-```bash
+![Current Landing Page](/Screenshot_2025-02-25_190847.jpg) Current Landing Page
+
+![Web Facilitator](/Screenshot_2025-02-25_191344.jpg) Web Facilitator
+
+## Requirements  
+
+Before setting up the project, ensure you have the following installed:  
+
+### **System Requirements**  
+- **Node.js** v20 or later (Recommended)  
+- **npm** v9 or later (or **yarn** / **pnpm**)  
+
+### **Dependencies**  
+This project is built with:  
+- **Next.js** 15.1.6  
+- **React** 19.0.0  
+- **TypeScript** (optional, but included in development)  
+- **Tailwind CSS** for styling  
+- **Framer Motion** for animations  
+- **Rough Notation** for annotations  
+- **React PageFlip** for interactive page flipping effects  
+- **React Icons** for vector icons  
+
+### **Development Dependencies**  
+- **ESLint** with Next.js config  
+- **TypeScript** for type safety  
+- **PostCSS** for CSS transformations  
+
+
+## Installation & Setup
+
+Clone the repository and install dependencies:
+
+```sh
+# Clone the repo
+git clone https://github.com/sutesumit/dodpage.git
+cd dodpage
+
+# Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+## Running the Development Server
+
+Start the development server:
+
+```sh
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application in action.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing & Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Modify `app/page.tsx` to customize the homepage. The app supports hot reloading, so changes reflect instantly.
 
-## Learn More
+## Contributing
+We welcome contributions! Feel free to submit issues, suggest improvements, or create pull requests.
 
-To learn more about Next.js, take a look at the following resources:
+## License
+This project is open-source under the [MIT License](LICENSE).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
