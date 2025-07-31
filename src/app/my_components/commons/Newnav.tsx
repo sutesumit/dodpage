@@ -22,7 +22,7 @@ const Navbar = () => {
         <AnimatePresence mode='popLayout'>
               <motion.ul
                 key='nav'
-                className='flex gap-1 p-1 items-baseline justify-between w-full'
+                className='flex gap-1 p-1 items-baseline justify-around w-full rounded-md bg-[var(--primary-blue)] border-[1px] border-blue-900'
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
