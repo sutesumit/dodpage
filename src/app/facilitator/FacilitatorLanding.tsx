@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import ARCLogo from '../my_components/elements/ARCLogo'
-import DodLogo from '../my_components/elements/DodLogo'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const titleArray = [ "Discrimination", "Diversity", "Inclusivity", "Fraternity", "Belonging"]
