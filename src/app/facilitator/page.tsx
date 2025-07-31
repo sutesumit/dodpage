@@ -1,13 +1,14 @@
 'use client';
-import React from 'react'
-import { Slab }  from 'react-loading-indicators'
+import Landing from '../my_components/elements/Landing';
 
 const Home = () => {
   return (
-    <div className='page pt-12 flex flex-col justify-center items-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
-            <Slab color="#131857" size="medium" text="" textColor="" />
-            <p className='text-center font-body text-xs max-w-[80ch] p-2 opacity-75'>The Dramas of Discrimination Web Facilitator is under construction, but not for long! We&apos;re working hard to make it a reality.</p>
-    </div>
+    <>
+      <Landing colorScheme="light" />
+      <button className="bg-[var(--primary-blue)] text-[var(--primary-white)] py-1 px-3 rounded-md">
+        Button
+      </button>
+    </>
   )
 }
 
