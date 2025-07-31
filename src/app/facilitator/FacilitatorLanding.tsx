@@ -28,14 +28,14 @@ const FacilitatorLanding = () => {
                     <div className={`dod-logo-wrapper my-4 w-auto text-[var(--primary-blue)]`}>
                     <div className="text-[1.25em] leading-[1.2em] antialiased">
                         Dramas
-                        <AnimatePresence mode='popLayout'>
+                        <AnimatePresence mode='wait'>
                             <motion.span
                                 className="font-of text-[2em] leading-[1rem]"
                                 key={currentTitleIndex === 0 ? "of" : "for"}
-                                initial={{ scale: 0.5, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                exit={{ scale: 0.5, opacity: 0 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                initial={{ letterSpacing: "-0.2em" }}
+                                animate={{ letterSpacing: "0em" }}
+                                exit={{ letterSpacing: "-0.2em" }}
+                                transition={{ duration: 0.2, ease: "easeInOut" }}
                             >
                                 {currentTitleIndex === 0 ? "of" : "for"}
                             </motion.span>
