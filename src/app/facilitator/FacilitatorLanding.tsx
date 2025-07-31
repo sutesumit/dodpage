@@ -28,23 +28,23 @@ const FacilitatorLanding = () => {
                     <div className={`dod-logo-wrapper my-4 w-auto text-[var(--primary-blue)]`}>
                     <div className="text-[1.25em] leading-[1.2em] antialiased">
                         Dramas
-                        <AnimatePresence>
+                        <AnimatePresence mode='popLayout'>
                             <motion.span
-                                className="font-of text-[2em] leading-[1rem] items-baseline pt-4 p-2 absolute"
+                                className="font-of text-[2em] leading-[1rem]"
                                 key={currentTitleIndex === 0 ? "of" : "for"}
-                                initial={{ x: "1em", scale: 0.7, opacity: 0 }}
-                                animate={{ x: 0, scale: 1, opacity: 1 }}
-                                exit={{ x: "1em", scale: 0.7, opacity: 0 }}
-                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                initial={{ scale: 0.5, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.5, opacity: 0 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
                             >
                                 {currentTitleIndex === 0 ? "of" : "for"}
                             </motion.span>
                         </AnimatePresence>
                         <br></br>
-                        <span className="h-[1em] border-r-[var(--primary-blue)] border-[0.25px]">
+                        <span className="h-[1em] flex items-center justify-start border-l-[var(--primary-blue)] border-[0.25px]">
                             <AnimatePresence>
                                 <motion.div
-                                    className={`h-[1em] absolute items-baseline`}
+                                    className={`h-[1em] absolute flex items-center`}
                                     key={currentTitleIndex}
                                     initial={{ y: "1em", scale: 0.9, opacity: 0 }}
                                     animate={{ y: 0, scale: 1, opacity: 1 }}
