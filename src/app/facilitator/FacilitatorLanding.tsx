@@ -16,7 +16,7 @@ const FacilitatorLanding = () => {
             console.log("currentTitleIndex", currentTitleIndex)
             clearInterval(interval)
         }
-    }, [])
+    }, [currentTitleIndex])
 
   return (
     <div className={`landing`}>

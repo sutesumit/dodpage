@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Clock from '../my_components/commons/clock/Clock'
 import FacButton from './fac_components/FacButton'
 
-const layout = ({children}: {children: React.ReactNode}) => {
+const Layout = ({children}: {children: React.ReactNode}) => {
 
     const pathname = usePathname()
     const isOverview = pathname.includes('/overview')
@@ -40,4 +40,4 @@ const layout = ({children}: {children: React.ReactNode}) => {
   )
 }
 
-export default layout
+export default Layout
