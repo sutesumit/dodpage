@@ -4,10 +4,14 @@ import Link from 'next/link'
 import { BiCollapseVertical } from "react-icons/bi";
 import { FiMenu } from "react-icons/fi";
 import { motion, AnimatePresence } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
 
   const [openMenu, setOpenMenu] = useState(false)
+
+  const pathname = usePathname()
+  const isFacilitator = pathname.includes('/facilitator')
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu)
@@ -18,6 +22,8 @@ const Navbar = () => {
 
       {/* Full Screen Navigation Menu */}
 
+      {
+      !isFacilitator && 
       <nav className='full-nav w-full text-current hidden sm:block text-xs rounded-md z-50'>
         <AnimatePresence mode='popLayout'>
               <motion.ul
@@ -28,7 +34,6 @@ const Navbar = () => {
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
                 onClick={toggleMenu}
-
               >
                 <Link href="/"><li className='nav-btn'><p className="text-[1em] text-left">Dramas<span className="font-of text-[2.5em] leading-[1em] p-[2px]">of </span>Discrimination</p></li></Link>
                 <div  className='flex gap-1 p-1 items-baseline justify-between'>
@@ -40,6 +45,7 @@ const Navbar = () => {
               </motion.ul>
           </AnimatePresence>
       </nav>
+      }
 
       {/* Mobile Navigation Menu */}
       <motion.nav 

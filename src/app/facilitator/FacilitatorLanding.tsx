@@ -16,11 +16,11 @@ const FacilitatorLanding = () => {
             console.log("currentTitleIndex", currentTitleIndex)
             clearInterval(interval)
         }
-    }, [])
+    }, [currentTitleIndex])
 
   return (
-    <div className={`landing relative w-full h-[calc(100vh-5rem)] border-[var(--primary-blue)] border-[0.25px] rounded-md bg-[var(--primary-white)]`}>
-        <div className='flex justify-center md:justify-end w-auto h-full p-5'>
+    <div className={`landing`}>
+        <div className='flex justify-center md:justify-end w-auto p-5'>
             <div className='m-auto'>
                 <div className="font-title w-auto flex flex-col items-start justify-start">
                     <ARCLogo />
@@ -41,7 +41,7 @@ const FacilitatorLanding = () => {
                             </motion.span>
                         </AnimatePresence>
                         <br></br>
-                        <span className="h-[1em] flex items-center justify-start border-l-[var(--primary-blue)] border-[0.25px]">
+                        <span className="h-[1em] flex items-center justify-start">
                             <AnimatePresence>
                                 <motion.div
                                     className={`h-[1em] absolute flex items-center`}
