@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ARCLogo from '../my_components/elements/ARCLogo'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const titleArray = [ "Discrimination", "Diversity", "Inclusivity", "Fraternity", "Belonging"]
 
@@ -24,6 +25,15 @@ const FacilitatorLanding = () => {
             <div className='m-auto'>
                 <div className="font-title w-auto flex flex-col items-start justify-start">
                     <ARCLogo />
+                    <div className="text-xs p-1 opacity-75 text-[var(--primary-blue)]">with a kind support from
+                        <Link 
+                            className="text-[var(--primary-blue)] mx-2 px-2 py-1 border-[var(--primary-blue)] border-[0.25px] rounded-md hover:bg-[var(--primary-blue)] hover:text-[var(--primary-white)] transition-colors duration-[500ms]"
+                            href="https://beneathatree.com/"
+                            target="_blank"
+                        >
+                            BeneathATree
+                        </Link>
+                    </div>
                     <div className={`text-xs p-1 opacity-75 text-[var(--primary-blue)]`}>presents</div>
                     <div className={`dod-logo-wrapper my-4 w-auto text-[var(--primary-blue)]`}>
                     <div className="text-[1.25em] leading-[1.2em] antialiased">
