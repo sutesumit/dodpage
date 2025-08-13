@@ -6,7 +6,7 @@ import Link from 'next/link'
 const FacButton = ({text, href}: {text: string, href: string}) => {
     return (
         <Link 
-            className=''
+            className='text-[0.9em]'
             href={href}
         >
             {text}

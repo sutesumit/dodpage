@@ -15,7 +15,7 @@ const Clock = () => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className='text-[var(--primary-white)] cursor-pointer'
+      className={`text-[var(--primary-white)] relative top-4 cursor-pointer rounded-md bg-slate-900 text-red-700 flex w-36 ${isHovered ? 'h-36' : 'h-10'} items-center justify-center transition-all duration-[500ms]`}
     >
       {
         !isHovered && <p>{time.toLocaleTimeString()}</p>

@@ -9,26 +9,29 @@ import FacButton from './fac_components/FacButton'
 const Layout = ({children}: {children: React.ReactNode}) => {
 
     const pathname = usePathname()
-    const isOverview = pathname.includes('/overview')
+    // const isOverview = pathname.includes('/overview')
+    const isFacilitatorLanding = pathname !== '/facilitator'
 
   return (
     <div className='flex flex-col w-full h-full'>
         {
-            isOverview &&
+            isFacilitatorLanding &&
             <div 
-                className={`flex flex-shrink-0 justify-between px-10 items-center h-10 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
+                className={`flex relative flex-shrink-0 justify-between px-10 items-center h-10 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
             >
                 <div className='w-12'>
                     <ArcLogo />
                 </div>
-                <Clock />
+                <div className='w-36 relative'>
+                    <Clock />
+                </div>
             </div>
         }
         <div className='flex flex-1 justify-center items-center h-auto'>
             {children}
         </div>
         {
-                isOverview &&
+                isFacilitatorLanding &&
             <div 
                 className={`flex flex-shrink-0 justify-between px-10 items-center h-10 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
             >
