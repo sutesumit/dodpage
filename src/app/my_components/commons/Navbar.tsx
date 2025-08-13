@@ -18,6 +18,7 @@ const Navbar = () => {
   return (
     <>
       <nav className='flex w-full overflow-hidden top-12 z-20 left-[50vw] -translate-x-[50%] px-1 py-1 gap-2 rounded-md bg-[var(--primary-blue)] border-[0.2px] border-blue-900 font-body text-xs shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] cursor-pointer'>
+          <AnimatePresence mode='popLayout'>
           {
             openMobMenu &&
             <motion.ul
@@ -32,6 +33,7 @@ const Navbar = () => {
             <CgScrollH />
           </motion.ul>
           }
+          </AnimatePresence>
           <AnimatePresence mode='popLayout'>
             { !openMobMenu &&
               <motion.ul
