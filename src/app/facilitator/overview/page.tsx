@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Slab } from 'react-loading-indicators'
 import ActivityOverview from './ActivityOverview'
 
 const page = () => {
