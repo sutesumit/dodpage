@@ -17,10 +17,10 @@ const Layout = ({children}: {children: React.ReactNode}) => {
         {
             isFacilitatorLanding &&
             <div 
-                className={`flex relative flex-shrink-0 justify-between px-10 items-center h-10 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
+                className={`flex relative flex-shrink-0 justify-between px-10 items-center h-14 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
             >
                 <div className='w-12'>
-                    <ArcLogo />
+                    <FacButton text="Back" href="/facilitator" />
                 </div>
                 <div className='w-36 relative'>
                     <Clock />
@@ -33,10 +33,12 @@ const Layout = ({children}: {children: React.ReactNode}) => {
         {
                 isFacilitatorLanding &&
             <div 
-                className={`flex flex-shrink-0 justify-between px-10 items-center h-10 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
+                className={`flex flex-shrink-0 justify-between px-10 items-center h-14 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
             >
                 <Link href="/"><p className="text-[0.75em] text-left">Dramas<span className="font-of text-[2em] leading-[1em] p-[2px]">of </span>Discrimination</p></Link>
-                <FacButton text="Back" href="/facilitator" />
+                <div className='w-20 h-auto'>
+                    <ArcLogo />
+                </div>
             </div>
             }
     </div>
