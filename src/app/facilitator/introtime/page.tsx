@@ -1,9 +1,22 @@
+'use client'
 import React from 'react'
+import RoundRobinForm from './RoundRobinForm'
+import ExampleQuote from './ExampleQuote'
+import Instructions from './Instructions'
 
 const page = () => {
+
   return (
-    <div className='page pt-12 flex flex-row gap-2 justify-center items-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
-      This is <span className='font-title text-[var(--primary-blue)]'>IntroTime</span>
+    <div className='flex flex-col py-2 gap-2 w-full h-full'>
+      <div className='page flex flex-row gap-2 justify-center items-center w-full h-full'>
+        <div className='flex gap-2 w-full h-full'>
+          <div className='flex w-full h-full window text-sm items-center justify-center'>
+            <RoundRobinForm />
+          </div>
+          <Instructions />
+        </div>
+      </div>
+      <ExampleQuote />
     </div>
   )
 }
