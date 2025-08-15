@@ -1,19 +1,5 @@
 import React, { useState } from "react";
-import { Play, Pause } from "lucide-react";
 import RoundRobin from "./RoundRobin";
-
-// const RoundRobin = ({ players, timer }: { players: number; timer: number }) => {
-//   const slotDuration = (timer * 1000 * 60) / players;
-
-//   return (
-//     <div className="p-4 border rounded">
-//       <h2 className="text-lg font-bold">RoundRobin</h2>
-//       <p>Players: {players}</p>
-//       <p>Timer (minutes): {timer}</p>
-//       <p>Slot Duration (ms): {slotDuration}</p>
-//     </div>
-//   );
-// };
 
 const RoundRobinForm = () => {
   const [players, setPlayers] = useState("");

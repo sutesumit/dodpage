@@ -17,8 +17,8 @@ const ExampleQuote = () => {
             </div>
             {showInstructions && (
                 <>
-                    <p className='font-body text-sm italic'>If you’re not sure how to start:</p>
-                    <p className='pl-10 p-2 font-title'>“I’m ____, I'm from/grew up in ____, and here’s one instance of <span className='text-highlighter'>caste privilege</span> I’ve noticed: ____.”</p>
+                    <p className='font-body text-sm italic'>If you&apost;re not sure how to start:</p>
+                    <p className='pl-10 p-2 font-title'>“I&apost;m ____, I&apost;m from/grew up in ____, and here&apost;s one instance of <span className='text-highlighter'>caste privilege</span> I&apost;ve noticed: ____.”</p>
                 </>
             )}
         </div>

@@ -30,7 +30,7 @@ const RoundRobin = ({ players, timer }: { players: number, timer: number }) => {
             })
         },1000)
         return ()=> clearInterval(time)
-    }, [countdown, isPaused]);
+    }, [countdown, isPaused, players]);
 
     const timerFormat = (time: number) => {
         const totalSeconds = Math.floor(time / 1000);
