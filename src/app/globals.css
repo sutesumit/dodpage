@@ -43,6 +43,14 @@ body {
     border: 1px solid red;
   }
 
+  .window {
+    @apply p-4 flex flex-col justify-center text-[var(--primary-blue)] bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] rounded-md
+  }
+
+  .text-highlighter {
+    @apply bg-[var(--primary-blue)] text-[var(--primary-white)] p-1 rounded-md
+  }
+
   .nav-btn {
     @apply px-2 py-2 rounded-md text-[var(--primary-white)] bg-[var(--primary-blue)] self-center text-center transition-all duration-300;
   }
