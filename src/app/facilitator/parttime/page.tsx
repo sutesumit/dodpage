@@ -1,11 +1,28 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import PartSectionTemplate from './PartSectTemplate'
+import PartAContent from './PartAContent'
+import PartBContent from './PartBContent'
 
-const page = () => {
+const Page = () => {
+    const [showInstructions, setShowInstructions] = useState(true)
+
+    const handleInstructions = () => {
+        setShowInstructions(!showInstructions)
+    }
+
   return (
-    <div className='page pt-12 flex flex-row gap-2 justify-center items-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
-      This is <span className='font-title text-[var(--primary-blue)]'>PartTime</span>
+    <div className='page w-full h-full py-2'>
+      <div className='flex flex-row gap-2 h-full w-full'>
+        <PartSectionTemplate handleInstructions={handleInstructions} showInstructions={showInstructions} title="Part A">
+          <PartAContent />
+        </PartSectionTemplate>
+        <PartSectionTemplate handleInstructions={handleInstructions} showInstructions={!showInstructions} title="Part B">
+          <PartBContent />
+        </PartSectionTemplate>
+      </div>
     </div>
   )
 }
 
-export default page
+export default Page

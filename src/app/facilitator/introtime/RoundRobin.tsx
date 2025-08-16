@@ -19,18 +19,21 @@ const RoundRobin = ({ players, timer }: { players: number, timer: number }) => {
 
     // Handle countdown for the current player:
     useEffect(() => {
-        if (activeCount >= players || isPaused) return;
-        const time = setInterval(()=>{
-            setCountdown((prev)=>{
-                if (prev <= 1000) {
-                    clearInterval(time);
-                    return 0;
-                }
-                return (prev-1000)
-            })
-        },1000)
-        return ()=> clearInterval(time)
-    }, [countdown, isPaused, players]);
+        if (isPaused || activeCount >= players) return;
+
+        const interval = setInterval(() => {
+          setCountdown((prev) => {
+            const newTime = prev - 1000;
+            if (newTime <= 0) {
+              setActiveCount((p) => p + 1);
+              return slotDuration;
+            }
+            return newTime;
+          });
+        }, 1000);
+
+        return () => clearInterval(interval);
+      }, [isPaused, activeCount, players, slotDuration]);
 
     const timerFormat = (time: number) => {
         const totalSeconds = Math.floor(time / 1000);
