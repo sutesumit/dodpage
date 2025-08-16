@@ -31,7 +31,7 @@ const Panel = () => {
         }
     ])
   return (
-    <div className='p-0 text-[var(--primary-blue)] min-w-[50%] min-h-[50%] flex flex-col items-center justify-center'>
+    <div className='p-0 text-[var(--primary-blue)] max-w-[50%] h-1/2 flex flex-col items-center justify-center'>
       <div className='tabs w-full flex flex-row'>
         {tabs.map((tab, index) => (
             <div 
@@ -43,7 +43,7 @@ const Panel = () => {
             </div>
         ))}
       </div>
-      <div className='description text-sm max-w-[80ch] p-5 bg-[var(--primary-white)] border-t-0 rounded-b-md flex-1 border-[0.25px] border-[var(--primary-blue)] w-full h-full flex items-center justify-center'>
+      <div className='description text-sm w-full p-5 bg-[var(--primary-white)] border-t-0 rounded-b-md flex-1 border-[0.25px] border-[var(--primary-blue)] h-full flex items-center justify-center'>
         {tabs.find(tab => tab.selected)?.content}
       </div>
     </div>
