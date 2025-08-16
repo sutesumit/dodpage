@@ -1,11 +1,10 @@
 import ActivityTile from '@/app/my_components/elements/ActivityTile'
 import React from 'react'
-import TimeLine from '@/app/my_components/elements/TimeLine'
 
 const ActivityOverview = () => {
   return (
-    <>
-        <div className='flex flex-row flex-wrap items-center justify-center gap-2 p-2'>
+    <div className='window flex flex-col gap-2'>
+        <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
         <ActivityTile
             title="IntroTime"
             href="/facilitator/introtime"
@@ -27,9 +26,9 @@ const ActivityOverview = () => {
             href="/facilitator/overtime"
         />
         </div>
-        <TimeLine num={5} />
-        <TimeLine num={5} />
-    </>
+        {/* <TimeLine num={5} />
+        <TimeLine num={5} /> */}
+    </div>
   )
 }
 

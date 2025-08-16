@@ -14,8 +14,8 @@ const RoundRobinForm = () => {
   return (
     <>
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="flex p-2 flex-col gap-2 min-w-[50ch]">
-          <div className="flex p-1 gap-4 items-center justify-center">
+        <form onSubmit={handleSubmit} className="flex p-2 flex-col items-center justify-center gap-2 w-[50ch]">
+          <div className="flex w-full p-1 gap-4 items-center justify-center">
             <label className="flex sr-only items-center justify-center font-medium">Players</label>
             <input
               type="number"
@@ -27,7 +27,7 @@ const RoundRobinForm = () => {
             />
           </div>
 
-          <div className="flex p-1 gap-4 items-center justify-center">
+          <div className="flex w-full p-1 gap-4 items-center justify-center">
             <label className="flex sr-only items-center justify-center font-medium">Timer</label>
             <input
               type="number"
@@ -41,7 +41,7 @@ const RoundRobinForm = () => {
 
           <button
             type="submit"
-            className="nav-btn px-4 py-1 border-[var(--primary-blue)] border-[0.25px]"
+            className="nav-btn w-full px-4 py-1 border-[var(--primary-blue)] border-[0.25px]"
           >
             Start <span className="font-title pl-2">PartTime A</span>
           </button>
