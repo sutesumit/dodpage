@@ -1,11 +1,23 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import StorySheet from './StorySheet'
+import StoryInstruction from './StoryInstruction'
 
-const page = () => {
+const Page = () => {
+    const [showInstructions, setShowInstructions] = useState(true)
+
+    const handleInstructions = () => {
+        setShowInstructions(!showInstructions)
+    }
+
   return (
-    <div className='page pt-12 flex flex-row gap-2 justify-center items-center w-full h-full rounded-md bg-[var(--primary-white)] border-[var(--primary-blue)] border-[0.25px] text-[var(--primary-blue)]'>
-      This is <span className='font-title text-[var(--primary-blue)]'>StoryTime</span>
+    <div className='page w-full h-full py-2'>
+      <div className='flex h-full w-full flex-row gap-2'>
+        <StoryInstruction handleInstructions={handleInstructions} showInstructions={!showInstructions} />
+        <StorySheet handleInstructions={handleInstructions} showInstructions={showInstructions} />
+      </div>
     </div>
   )
 }
 
-export default page
+export default Page
