@@ -20,7 +20,7 @@ const Layout = ({children}: {children: React.ReactNode}) => {
                 className={`flex relative flex-shrink-0 justify-between px-10 items-center h-14 text-[var(--primary-white)] bg-[var(--primary-blue)] rounded-md`}
             >
                 <div className='w-12'>
-                    <FacButton href="/facilitator" />
+                    <FacButton href="/facilitator/overview" />
                 </div>
                 <div className='w-36 relative'>
                     <Clock />
