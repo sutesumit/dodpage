@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ExpansionToggle from '../fac_components/ExpansionToggle'
 
-const PartBInstruction = () => {
-    const [showInstructions, setShowInstructions] = useState(false)
+const PartBInstruction = ({showInstructions, handleInstructions}: {showInstructions: boolean, handleInstructions: () => void}) => {
     const constitutionValues = ['Liberty', 'Equality', 'Fraternity'] 
     const [index, setIndex] = useState(0)
     const [selected, setSelected] = useState(0)
@@ -15,12 +14,8 @@ const PartBInstruction = () => {
         return () => clearInterval(interval);
     }, [index]);
 
-    const handleInstructions = () => {
-        setShowInstructions(!showInstructions)
-    }
-
   return (
-    <div className={`window w-full pr-12 relative ${showInstructions ? 'h-40' : 'h-12'}`}>
+    <div className={`window h-full relative ${showInstructions ? 'w-full' : 'w-10'}`}>
         {showInstructions && (
             <div className={`w-full flex flex-row gap-2`}>
                 <div className='window w-full flex flex-row gap-2'>
@@ -46,7 +41,7 @@ const PartBInstruction = () => {
                 </div>
             </div>
         )}
-        <ExpansionToggle className='absolute rotate-90 bottom-2 right-2' handleInstructions={handleInstructions} showInstructions={showInstructions}/>
+        <ExpansionToggle className='absolute top-2 right-2' handleInstructions={handleInstructions} showInstructions={showInstructions}/>
     </div>
   )
 }

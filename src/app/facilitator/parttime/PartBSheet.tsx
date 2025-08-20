@@ -2,12 +2,7 @@ import React, { useState } from 'react'
 import ExpansionToggle from '../fac_components/ExpansionToggle'
 import Image from 'next/image'
 
-const PartBSheet = () => {
-    const [showInstructions, setShowInstructions] = useState(false)
-
-    const handleInstructions = () => {
-        setShowInstructions(!showInstructions)
-    }
+const PartBSheet = ({showInstructions, handleInstructions}: {showInstructions: boolean, handleInstructions: () => void}) => {
   return (
     <div className={`window ${showInstructions ? 'w-full' : 'w-10'} relative`}>
       {showInstructions && (

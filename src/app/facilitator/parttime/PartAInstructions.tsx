@@ -7,6 +7,7 @@ const PartAInstructions = () => {
     const handleInstructions = () => {
         setShowInstructions(!showInstructions)
     }
+
   return (
     <div className={`window relative flex items-center justify-center ${showInstructions ? 'w-full pr-10' : 'w-11'}`}>
       {showInstructions && 

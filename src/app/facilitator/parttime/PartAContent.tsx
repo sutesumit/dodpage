@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import RoundRobinForm from './RoundRobin/RoundRobinForm'
 import PartAQuote from './PartAQuote'
+import PartAInstructions from './PartAInstructions'
 
 const PartAContent = () => {
     const [showInstructions, setShowInstructions] = useState(false)
@@ -15,9 +16,7 @@ const PartAContent = () => {
           <div className='window flex-1 justify-center items-center'>
             <RoundRobinForm />
           </div>
-          {/* <div className='window flex-1'>
-            Instructions
-          </div> */}
+          <PartAInstructions showInstructions={showInstructions} handleInstructions={handleInstructions} /> 
       </div>
       <PartAQuote showInstructions={showInstructions} handleInstructions={handleInstructions} />
     </div>
