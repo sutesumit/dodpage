@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ExpansionToggle from '../fac_components/ExpansionToggle'
 
-const PartAQuote = ({showInstructions, handleInstructions}: {showInstructions: boolean, handleInstructions: () => void}) => {
+const PartAQuote = () => {
+    const [showInstructions, setShowInstructions] = useState(false)
+
+    const handleInstructions = () => {
+        setShowInstructions(!showInstructions)
+    }
+
   return (
     <div 
         className={`window relative items-start justify-start flex w-full ${showInstructions ? 'h-40' : 'h-12'}`}

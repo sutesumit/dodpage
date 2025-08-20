@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ExpansionToggle from '../fac_components/ExpansionToggle'
 
-const PartBDivision = () => {
-    const [showInstructions, setShowInstructions] = useState(false)
-    const handleInstructions = () => {
-        setShowInstructions(!showInstructions)
-    }
-  return (
+const PartBDivision = ({showInstructions, handleInstructions}: {showInstructions: boolean, handleInstructions: () => void}) => {
+    return (
     <div className={`window flex flex-col gap-2 relative ${showInstructions ? 'w-full' : 'w-10'}`}>
         {showInstructions && (
         <div className='flex flex-col gap-2 pr-10'>

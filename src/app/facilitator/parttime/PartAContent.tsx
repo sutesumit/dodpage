@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import RoundRobinForm from './RoundRobin/RoundRobinForm'
 import PartAQuote from './PartAQuote'
+import PartAInstructions from './PartAInstructions'
 
 const PartAContent = () => {
-    const [showInstructions, setShowInstructions] = useState(false)
+    // const [showInstructions, setShowInstructions] = useState(false)
 
-    const handleInstructions = () => {
-        setShowInstructions(!showInstructions)
-    }
+    // const handleInstructions = () => {
+    //     setShowInstructions(!showInstructions)
+    // }
 
   return (
     <div className='flex flex-col gap-2 items-center justify-center h-full w-full pr-10'>
@@ -15,11 +16,9 @@ const PartAContent = () => {
           <div className='window flex-1 justify-center items-center'>
             <RoundRobinForm />
           </div>
-          {/* <div className='window flex-1'>
-            Instructions
-          </div> */}
+          <PartAInstructions /> 
       </div>
-      <PartAQuote showInstructions={showInstructions} handleInstructions={handleInstructions} />
+      <PartAQuote />
     </div>
   )
 }
