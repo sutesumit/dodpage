@@ -16,9 +16,9 @@ const PartAContent = () => {
           <div className='window flex-1 justify-center items-center'>
             <RoundRobinForm />
           </div>
-          <PartAInstructions showInstructions={showInstructions} handleInstructions={handleInstructions} /> 
+          <PartAInstructions /> 
       </div>
-      <PartAQuote showInstructions={showInstructions} handleInstructions={handleInstructions} />
+      <PartAQuote />
     </div>
   )
 }
