@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ExpansionToggle from '../fac_components/ExpansionToggle'
 import Image from 'next/image'
 
