@@ -1,33 +1,88 @@
 'use client';
 import React from 'react'
-import HTMLFlipBook from 'react-pageflip'
 import Image from 'next/image'
+import Link from 'next/link';
+
+const cards = [
+  {
+    id: 1,
+    title: 'Facilitation Manual',
+    description: 'With the Dramas of Discrimination Facilitation Manual, you can recreate inclusion workshops within your circles, adapting the exercises, scripts, and reflections to your community’s unique context.',
+    href: '/resources/facilitation-manual',
+    cover: '/manual/ARC_DoD_Manual_Page-0.jpg',
+    primaryCard: true
+
+  },
+  {
+    id: 2,
+    title: 'Beyond Good Intentions',
+    description: 'A savarna reflection on the limits of good intentions and the necessity of grace and courage in accountability.',
+    href: '/resources/beyond-good-intentions',
+    cover: '/manual/ARC_DoD_Manual_Page-2.jpg',
+    primaryCard: false
+  },{
+    id: 3,
+    title: 'After Collective Care Fails',
+    description: 'A Dalit participant reflects on humiliation, neglect, and the silence of a room that failed them.',
+    href: '/resources/after-collective-care-fails',
+    cover: '/manual/ARC_DoD_Manual_Page-1.jpg',
+    primaryCard: false
+  },
+  // {
+  //   id: 4,
+  //   title: 'Beyond Good Intentions',
+  //   description: 'Beyond Good Intentions',
+  //   href: '/resources/beyond-good-intentions',
+  //   cover: '/manual/ARC_DoD_Manual_Page-2.jpg',
+  //   primaryCard: false
+  // },{
+  //   id: 5,
+  //   title: 'After Collective Care Fails',
+  //   description: 'After Collective Care Fails',
+  //   href: '/resources/after-collective-care-fails',
+  //   cover: '/manual/ARC_DoD_Manual_Page-1.jpg',
+  //   primaryCard: false
+  // },
+]
 
 const Home = () => {
   return (
     <div className="page flex flex-col items-center justify-center bg-[var(--primary-blue)] w-full h-full rounded-md">
-      
-      <div className='object-contain flex h-[70vh] min-w-[214px] md:w-[70%] overflow-hidden p-2'>
-        {// @ts-expect-error too many props
-        <HTMLFlipBook
-          width={70}
-          height={100}
-          size="stretch"
-          style = {{width: '100%', height: '100%'}}
-          usePortrait={true}
-        >
-          {Array.from({length: 25}, (_, index)  => (
-            <div key={index} className="page">
-              <Image 
-                src={`/manual/ARC_DoD_Manual_Page-${index}.jpg`} 
-                alt={`Facilitator Manual Page ${index+1}`} 
-                layout='fill'
-                className='border-[0.25px] border-[var(--primary-blue)] rounded-md'
-              />
-            </div> ))}
-        </HTMLFlipBook>}
-      </div> 
-      <h5 className='text-xs text-center p-2 opacity-75 before:content-["-"] after:content-["-"]'>Click the pages to leaf through the Dramas of Discrimination Workshop Facilitation Manual. We soon intend to make the <span className='p-[2px] border-[0.25px] border-[var(--primary-white)] rounded-md cursor-wait bg-[var(--primary-blue)] text-[var(--primary-white)] hover:bg-[var(--primary-white)] hover:text-[var(--primary-blue)]'>Download</span> available.</h5> 
+      <div className='flex flex-col w-full h-full pt-12 items-center justify-center text-[var(--primary-white)] rounded-md'>
+        <div className='page-container pt-4 grid grid-cols-2 gap-5 overflow-scroll'>
+          {cards.map((card) => (
+            <div 
+              key={card.id}
+              className={`hover:bg-blue-800 ${card.primaryCard ? 'col-span-2' : 'col-span-1'}`}
+            >
+              <Link 
+                href={card.href} 
+                className={`relative flex flex-col items-start justify-center w-full h-[30vh] rounded-md overflow-hidden
+                  ${card.primaryCard 
+                      ? '' 
+                      : ''
+                    }
+                  `}
+              >
+                <Image 
+                  src={card.cover} 
+                  alt={card.title} 
+                  fill
+                  className='object-cover'
+                />
+                <div className='bg-[var(--primary-blue)] text-[var(--primary-white)] z-10 m-2 p-3 rounded-md'>
+                  <h2 className='text-lg'>{card.title}</h2>
+                  <p className='text-sm opacity-50'>{card.description}</p>
+                </div>
+                <div
+                  className='bg-gradient-to-tl from-blue-800 to-transparent w-full h-full absolute'
+                >
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
